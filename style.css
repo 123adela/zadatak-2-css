@@ -1,0 +1,81 @@
+body{
+    background-color: #050210;
+}
+
+
+.box {
+    background:linear-gradient( #fb5dad, #55fb9f, #b97aff);
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    border-radius: 100%;
+    position: relative;
+    animation-name: myAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+    
+}
+
+@keyframes myAnimation{
+    from {
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.box:after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+     background-color:#050210;
+    border-radius: 100%;
+    animation: animate 10s linear infinite;
+
+
+}
+
+
+
+@keyframes animate {
+    0%{background-color:  rgb(14, 34, 34);}
+    25%{background-color: rgb(124, 252, 209);}
+    50%{background-color: rgb(30, 37, 37);}
+    75%{background-color: rgb(20, 248, 248);}
+    100%{background-color: rgb(38, 98, 109);}
+
+}
+.box span{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background:linear-gradient( #fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+   
+    
+
+}
+
+.box span:nth-child(1){
+    filter: blur(10px);
+
+}
+.box span:nth-child(2){
+    filter: blur(20px);
+
+}
+.box span:nth-child(3){
+    filter: blur(30px);
+}
+
+   
+
+  
+
+   
